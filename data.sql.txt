@@ -1,0 +1,14 @@
+create table snippets
+(
+    id      serial       not null
+        constraint snippets_pkey
+            primary key,
+    title   varchar(100) not null,
+    content text         not null,
+    created timestamp    not null,
+    expires timestamp    not null
+);
+
+INSERT INTO snippets (id, title, content, created, expires) VALUES (1, 'An old silent pond', 'An old silent pond...\nA frog jumps into the pond,\nsplash! Silence again.\n\n– Matsuo Bashō', '2021-01-05 19:04:02.553621', '2022-01-05 00:00:00.000000');
+INSERT INTO snippets (id, title, content, created, expires) VALUES (2, 'Over the wintry forest', 'Over the wintry\nforest, winds howl in rage\nwith no leaves to blow.\n\n– Natsume Soseki', '2021-01-05 19:04:02.599473', '2022-01-05 00:00:00.000000');
+INSERT INTO snippets (id, title, content, created, expires) VALUES (3, 'First autumn morning', 'First autumn morning\nthe mirror I stare into\nshows my father''s face.\n\n– Murakami Kijo', '2021-01-05 19:04:02.627584', '2021-01-12 00:00:00.000000');
